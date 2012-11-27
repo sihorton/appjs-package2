@@ -27,10 +27,7 @@ CryptoStream.prototype.end = function(data) {
 	try {
 		this.emit("data", this._cipher.final(this.outputEncoding))
 	} catch(e) {
-		console.log("throwErrors",this);
 		if (this.throwErrors) this.emit("error",e);
-		//this.emit("error",e);
-		//console.log(e);
 	}
 	this.emit("end");
 }
