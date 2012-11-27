@@ -1,6 +1,6 @@
 {
   "name": "appjs-package2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "packaged resource module with streaming support",
   "main": "base64-streamer.js",
   "readme": "appjs-package2\n==============\n\npackaged resource module with streaming support",

@@ -5,7 +5,6 @@ var file = __filename;
 var b64Streamer = require('./base64-streamer.js');
 console.log("input file:",file);
 
-
 var read = fs.createReadStream(file);
 var encode = b64Streamer.Encoder();
 var decode = b64Streamer.Decoder();
