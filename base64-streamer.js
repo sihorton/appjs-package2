@@ -56,11 +56,7 @@ var base64DecodeStreamer = function () {
 require('util').inherits(base64DecodeStreamer, stream);
 base64DecodeStreamer.prototype.write = function (chunk,encoding) {
 	//use buffer to decode.
-	if(!Buffer.isBuffer(chunk)) {
-		this.emit('data',chunk.toString());
-	} else {
-		this.emit('data',new Buffer(chunk,'base64'));
-	}
+	this.emit('data',new Buffer(chunk.toString(),'base64'));
 };
 base64DecodeStreamer.prototype.end = function (chunk,encoding) {
 	args = Array.prototype.slice.call(arguments, 0);
